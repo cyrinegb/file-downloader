@@ -1,4 +1,4 @@
-# 📦 File Downloader - Modern File Management System
+# 📦 File Downloader - Système moderne de gestion de fichiers
 
 <div align="center">
  <img src =https://img.shields.io/badge/React-18.3.1-61DAFB?style=for-the-badge&logo=react&logoColor=white>
@@ -15,7 +15,7 @@
 
 ---
 
-## 🎯 About
+## 🎯 À propos
 
 File Downloader est une application full-stack avec **React**, **Material-UI** et **Flask** permettant de :
 
@@ -34,7 +34,7 @@ File Downloader est une application full-stack avec **React**, **Material-UI** e
 
 ---
 
-## ✨ Key Features
+## ✨ Fonctionnalités principales
 
 ### 🎨 Frontend (React + Material-UI)
 
@@ -52,6 +52,7 @@ File Downloader est une application full-stack avec **React**, **Material-UI** e
 - 🎨 Animations : Hover effects et transitions fluides
 - 📱 Responsive Design : Adaptatif mobile/tablet/desktop
 - 🖼️ Icônes par type : Reconnaissance visuelle PDF, Images, Documents, etc.
+- 🔍 Barre de recherche
 
  #### State Management
 
@@ -85,44 +86,40 @@ File Downloader est une application full-stack avec **React**, **Material-UI** e
 - Python >= 3.8
 - pip >= 21.x
 - 
-#### Backend Setup
-- Navigate to the backend directory : cd backend
-- Install dependencies : pip install -r requirements.txt
-- Create virtual environment :  python -m venv venv
-- Activate virtual environment
-  * Windows: venv\Scripts\activate
-  * macOS/Linux: source venv/bin/activate
-- Lancer le serveur Backend : python app.py       
+#### Configuration du Backend
+- Se déplacer dans le dossier backend : `cd backend`
+- ajouter un dossier nommé files ' mkdir files '
+- Créer l'environnement virtuel : `python -m venv venv`
+- Activer l'environnement virtuel :
+  * Windows : `venv\Scripts\activate`
+  * macOS / Linux : `source venv/bin/activate`
+- Installer les dépendances : `pip install -r requirements.txt`
+- Lancer le serveur Backend : `python app.py`              
 
-#### frontend Setup
-- Navigate to the frontend directory (new terminal) : cd frontend
-- Install dependencies : npm install
-- Lancer le serveur React : npm start       
+#### Configuration du Frontend
+- Se déplacer dans le dossier frontend (dans un nouveau terminal) : `cd frontend`
+- Installer les dépendances : `npm install`
+- Lancer le serveur React : `npm start`
+-     
 ## 📡 Exemples d’appels API5
 - Liste des fichiers : curl http://localhost:5000/api/files
-- Télécharger un fichier : curl -O http://localhost:5000/download/document.pdf
+- ```json
+
+  {
+    "last_modified": "2025-10-23T15:55:51.732451Z",
+    "name": "PDFnum1.pdf",
+    "size": 242612,
+    "type": "pdf"
+  }
+
+- Télécharger un fichier : curl -O http://localhost:5000/download/PDFnum1.pdf
 ## 🧪 Procédure pour exécuter les tests
--  backend : cd backend -
--  pytest tests/ -v
--  frontend : cd frontend
--  npm test
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+-  backend :
+  * cd backend -
+  * pytest -v tests/test_app.py
+-  frontend :
+   * cd frontend
+   * npm test
 
 
 
